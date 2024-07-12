@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width">
+<title>Ebook</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<audio id="title">
+  <source src="audio/Title.mp3" type="audio/mp3">
+</audio>
+<audio id="apg34">
+  <source src="audio/34.mp3" type="audio/mp3">
+</audio>
+<audio id="apg56">
+  <source src="audio/56.mp3" type="audio/mp3">
+</audio>
+<audio id="apg78">
+  <source src="audio/78.mp3" type="audio/mp3">
+</audio>
+<audio id="apg910">
+  <source src="audio/910.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1112">
+  <source src="audio/1112.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1314">
+  <source src="audio/1314.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1516">
+  <source src="audio/1516.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1718">
+  <source src="audio/1718.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1920">
+  <source src="audio/1920.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2122">
+  <source src="audio/2122.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2324">
+  <source src="audio/2324.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2526">
+  <source src="audio/2526.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2728">
+  <source src="audio/2728.mp3" type="audio/mp3">
+</audio>
+<video id="page1vid" class="animation" width="320" height="240" loop="true" autoplay muted>
+  <source src="video/Title Page.mp4" type="video/mp4">
+</video>
+<video id="page2vid" class="animation "   loop="true" autoplay>
+  <source src="video/Page_2.mp4" type="video/mp4">
+</video>
+<video id="page3vid" class="animation" width="320" height="240" loop="true" autoplay>
+  <source src="video/Page_3.mp4" type="video/mp4">
+</video>
+<video id="page4vid" class="animation"  loop="true" autoplay>
+  <source src="video/Page_4.mp4" type="video/mp4">
+</video>
+	<video id="page5vid" class="animation" width="320" height="240" loop="true" autoplay>
+  <source src="video/Page_5.mp4" type="video/mp4">
+</video>
+	
+	
+	<img id="page1" class="backgroundImage" src="pages/book11pg01.png"/>
+	<img id="page2" class="backgroundImage" src="pages/book11pg02.png"/>
+	<img id="page3" class="backgroundImage" src="pages/book11pg03.png"/> 
+	<img id="page4" class="backgroundImage" src="pages/book11pg04.png"/> 
+	<img id="page5" class="backgroundImage" src="pages/book11pg05.png"/> 
+	<img id="page6" class="backgroundImage" src="pages/book11pg06.png"/> 
+	<img id="page7" class="backgroundImage" src="pages/book11pg07.png"/> 
+	<img id="page8" class="backgroundImage" src="pages/book11pg17.png"/>
+
+	
+<div id="controls">
+  <input type="range" id="timeSlider" value="0" min="0" step="1" class="slider">
+  <div id="playBtn" onclick="PlayAudio()"></div>
+  <div id="pauseBtn" onclick="PauseAudio()"></div>
+  <div id="replayBtn" onclick="Replay()"></div>
+  <div id="prevBtn" onclick="GoPrev()"></div>
+  <div id="nextBtn" onclick="GoNext()"></div>
+</div>
+<div id="Page3" class="readingText">
+  <div id="myModal" class="modal" >
+    <div class="modal-content"> <span class="close">&times;</span> <img id="pic" src="pages/page_01.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence1">‘தாத்தா வந்ததிலிருந்துதான் இந்தத் தொல்லை.</span> 
+  <span id="sentence1a">இருமல் சத்தம் ஓயாமல் கேட்கிறது. </span> 
+  <span id="sentence1b"><a href="#" id="myBtn_1">உரக்கப் பேசுகிறார்.</a></span> 
+  <span id="sentence1c"> ஏன் தான் இங்கு வந்தாரோ,’ </span> 
+  <span id="sentence2">என்று நினைத்தான் அரவிந்தன்.</span> 
+  </p>
+  <p> 
+  <span id="sentence3">தாத்தா வந்து </span> 
+  <span id="sentence3a">இரண்டு மாதங்கள் ஆகிவிட்டன.</span> 
+  <span id="sentence3b">பாட்டி இறந்த பின்னர்,  </span> 
+  <span id="sentence4">இந்தியாவிலிருந்த அவரை</span> 
+  <span id="sentence4a">அப்பா இங்கே அழைத்துக்கொண்டு வந்துவிட்டார். </span>
+  <span id="sentence5">வந்ததிலிருந்து </span> 
+  <span id="sentence5a">தாத்தாவுக்கு இந்த வீடே கதி.</span> 
+  </p>
+  <p> 
+  <span id="sentence6">காலையில் அவர் எப்போது எழுகிறார்,</span> 
+  <span id="sentence6a"> எழுந்ததும் அவர் என்ன செய்கிறார் </span> 
+  <span id="sentence6b">என்று இதுவரை அரவிந்தன் கவனித்ததில்லை.</span> 
+  <span id="sentence7">அவனோ காலையில்<a href="#" id="myBtn_2"> அறக்கப் பறக்கப்</a>  </span> 
+  <span id="sentence7a">பள்ளிக்கு ஓடுபவன். </span> 
+  <span id="sentence7b">இதில் தாத்தாவை எப்படிக் கவனிப்பது?</span>  
+  </p>
+  <p> 
+  <span id="sentence8">ஒருமுறை அவனருகில் வந்து</span> 
+  <span id="sentence8a">அவன் எதிர்பார்க்காமல் உரக்க, </span>
+  <span id="sentence8b">“அரவிந்து! அரவிந்து!”</span>  
+  <span id="sentence8c">என்று அழைத்தார்.</span>  
+  </p>
+  <p> 
+  <span id="sentence9">அதற்கு அவன்,</span> 
+  <span id="sentence9a"> “ஏன் தாத்தா இப்படிக் கத்துறீங்க?” </span> 
+  <span id="sentence9b">என்று கத்தினான்.</span> 
+  </p>
+</div>
+<div id="Page4" class="readingText">
+  <div id="myModal2" class="modal2" >
+    <div class="modal-content2"  > <span class="close2">&times;</span> <img id="pic2" src="pages/page_03.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence10">அவர் சிரித்துக்கொண்டே, </span> 
+  <span id="sentence10a">“பேனா வேணும். </span> 
+  <span id="sentence10b">வைத்திருந்தால் ஒன்னு கொடு,”</span> 
+  <span id="sentence10c">என்று கேட்டார். </span> 
+  <span id="sentence11">அரவிந்தன் <a href="#" id="myBtn_3">எரிச்சலடைந்தான்.</a> </span> 
+  <span id="sentence11a">‘கொஞ்சங்கூட நாகரிகம் இல்லாமல்</span> 
+  <span id="sentence11b">என் அறைக்கு வந்ததே தவறு. </span> 
+  <span id="sentence11c">இதில் காது கிழியப் பேசுகிறார்.’</span>
+  </p>
+  <p> 
+  <span id="sentence12">“நான் படிக்கிறேன்.</span>
+  <span id="sentence12a"><a href="#" id="myBtn_4">தொந்தரவு</a> செய்யாதீங்க,”</span> 
+  <span id="sentence13">என்று சொல்லிவிட்டுக் கதவை மூடிவிட்டான்.</span> 
+  <span id="sentence14">அதற்குப் பிறகு அவர் பேசவேயில்லை.</span> 
+  <span id="sentence14a">அரவிந்தனும் </span> 
+  <span id="sentence14b">அவரைக் கண்டுகொள்ளாமல் விட்டுவிட்டான்.</span>
+  </p> 
+  <p> 
+  <span id="sentence15">இப்போது பள்ளி விடுமுறை என்பதால்</span>  
+  <span id="sentence16">கடந்த இரண்டு நாள்களாகத்தான்</span>
+  <span id="sentence16a">தாத்தாவைக் கவனிக்கிறான். </span> 
+  <span id="sentence17">விடியற்காலையில் </span> 
+  <span id="sentence17a">நான்கு மணியளவில் எழுந்துவிடுவார். </span>
+  <span id="sentence17b">சிறிது நேரம் இருமல் சத்தம்.</span>
+  <span id="sentence17c">அதுவே அவர் எழுந்துவிட்டார்</span>
+  <span id="sentence18">என்பதைத் தெரிவிக்கும். </span> 
+  <span id="sentence18a">பிறகு, யாரையும் தொந்தரவு செய்யாமல்  </span>
+  <span id="sentence18b">கீழே சென்றுவிடுவார்.</span>
+  </p> 
+  <p>  
+  <span id="sentence19">“உன் தாத்தா கீழே போனார். </span> 
+  <span id="sentence19a">இன்னும் வரல்ல.</span> 
+  <span id="sentence20">போய்ப் பார்த்துட்டு வா,”</span> 
+  <span id="sentence20a">என்று அப்பா சொன்னார். </span> 
+  <span id="sentence21">அரவிந்தன் வெளியே வந்தான். </span>
+  <span id="sentence22"><a href="#" id="myBtn_5">குளிர்ந்த காற்று</a> சில்லென்று முகத்தில் பட்டது.</span>
+  </p>  
+</div>
+<div id="Page5" class="readingText">
+  <div id="myModal3" class="modal3" >
+    <div class="modal-content3"  > <span class="close3">&times;</span> <img id="pic3" src="pages/page_05.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence23">தாத்தா <a href="#" id="myBtn_6">நடைபாதையில்</a></span> 
+  <span id="sentence23a">மெதுவாக நடந்துகொண்டிருந்தார். </span> 
+  <span id="sentence23b">அவர் போவோர் வருவோரைப் </span>
+  <span id="sentence23c">பார்த்துக்கொண்டே சென்றார். </span>
+  <span id="sentence24">அரவிந்தன், “தாத்தா!”</span>
+  <span id="sentence24a">என்று அழைத்தவாறு </span>
+  <span id="sentence24b">அவர் அருகில் சென்றான். </span>
+  <span id="sentence24c">அவர் தொடர்ந்து நடந்தார். </span>
+  </p>
+  <p>   
+  <span id="sentence25">அரவிந்தன், “தாத்தா... தாத்தா...” </span> 
+  <span id="sentence25a">என்று அழைத்தான்.</span> 
+  <span id="sentence25b">அவர் தொடர்ந்து நடந்தார்.</span> 
+  </p>
+  <p>   
+  <span id="sentence26">டிரிங்... டிரிங்... டிரிங்... </span> 
+  <span id="sentence26a">தாத்தா தொடர்ந்து நடந்தார்.</span> 
+  <span id="sentence26b">அப்போது, ஒரு மிதிவண்டி </span> 
+  <span id="sentence27">அவரை இடிப்பது போல்</span> 
+  <span id="sentence27a">அவர் அருகில் வந்து விலகியது.</span> 
+  <span id="sentence27b">அவர் சற்றுத் தடுமாறினார். </span> 
+  <span id="sentence28">அரவிந்தன் அவர் கையைப் பிடித்துக்கொண்டான்.</span> 
+  <span id="sentence28a">அவர் ஆச்சரியத்துடன்</span> 
+  <span id="sentence29">அவனைப் பார்த்துப் புன்னகைத்தார்.</span> 
+  </p>
+  <p>  
+  <span id="sentence30">“அவரைப் பார் அரவிந்தா.</span> 
+  <span id="sentence30a">மிதிவண்டியின் மணியை</span> 
+  <span id="sentence30b">ஒலிக்காமலேயே செல்கிறார்,”</span> 
+  <span id="sentence30c">என்றார் தாத்தா.</span> 
+  </p>
+</div>
+<div id="Page6" class="readingText">
+  <div id="myModal4" class="modal4" >
+    <div class="modal-content4"  > <span class="close4">&times;</span> <img id="pic4" src="pages/page_06.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence31">அப்போதுதான் தாத்தாவுக்குச் சரியாகக் </span> 
+  <span id="sentence32">காது கேட்கவில்லை என்பதை </span> 
+  <span id="sentence33">உணர்ந்து<a href="#" id="myBtn_7"> வருந்தினான்</a> அரவிந்தன். </span>
+  <span id="sentence34">வீட்டிற்கு வந்ததும்,</span>
+  <span id="sentence35">“அப்பா, நாளை தாத்தாவை </span> 
+  <span id="sentence36"><a href="#" id="myBtn_8"> மருத்துவரிடம்</a> அழைத்துச் செல்ல வேண்டும்,” </span>
+  <span id="sentence37">என்றான்.</span>  
+  </p>
+</div>
+
+<script>
+		  var dummystore=0
+		  var modal = document.getElementById("myModal");
+		  var modal2 = document.getElementById("myModal2");
+		  var modal3 = document.getElementById("myModal3");
+		  var modal4 = document.getElementById("myModal4");
+		  var btn1 = document.getElementById("myBtn_1");
+		  var btn2 = document.getElementById("myBtn_2");
+		  var btn3 = document.getElementById("myBtn_3");
+		  var btn4 = document.getElementById("myBtn_4");
+		  var btn5 = document.getElementById("myBtn_5");
+		  var btn6 = document.getElementById("myBtn_6");
+		  var btn7 = document.getElementById("myBtn_7");
+		  var btn8 = document.getElementById("myBtn_8");
+		  var span = document.getElementsByClassName("close")[0];
+		  var span2 = document.getElementsByClassName("close2")[0];
+		  var span3 = document.getElementsByClassName("close3")[0];
+		  var span4 = document.getElementsByClassName("close4")[0];
+		  
+		  
+		    btn1.onclick = function() {
+				dummystore=1;
+				document.getElementById("pic").src= "pages/page_01.jpg";
+				modal.style.display = "block";
+		    }
+		  
+		  	btn2.onclick = function() {
+			  	dummystore=2;
+				document.getElementById("pic").src= "pages/page_02.jpg";
+  				modal.style.display = "block";
+			}
+			
+			
+			btn3.onclick = function() {
+				dummystore=1;
+				document.getElementById("pic2").src= "pages/page_03.jpg";
+				modal2.style.display = "block";
+		  	}
+		  
+		  	btn4.onclick = function() {
+			  	dummystore=2;
+				document.getElementById("pic2").src= "pages/page_04.jpg";
+  				modal2.style.display = "block";
+			}
+				  
+			btn5.onclick = function() {
+				dummystore=1;
+				document.getElementById("pic2").src= "pages/page_05.jpg";
+				modal2.style.display = "block";
+		  	}
+		  
+		  
+		  	btn6.onclick = function() {
+			  	dummystore=2;
+				document.getElementById("pic3").src= "pages/page_06.jpg";
+  				modal3.style.display = "block";
+			}
+				
+				
+			btn7.onclick = function() {
+			  	dummystore=2;
+				document.getElementById("pic4").src= "pages/page_07.jpg";
+  				modal4.style.display = "block";
+			}
+			
+			btn8.onclick = function() {
+			  	dummystore=2;
+				document.getElementById("pic4").src= "pages/page_08.jpg";
+  				modal4.style.display = "block";
+			}
+
+
+
+									
+// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			span2.onclick = function() {
+			  modal2.style.display = "none";
+			}
+			span3.onclick = function() {
+			  modal3.style.display = "none";
+			}
+			span4.onclick = function() {
+			  modal4.style.display = "none";
+			}
+// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				
+			  if (event.target == modal) {
+				modal.style.display = "none";
+				modal2.style.display = "none";
+				modal3.style.display = "none";
+				modal4.style.display = "none";
+			  }
+			}
+</script> 
+<script src="js/script.js"></script>
+</body>
+</html>
